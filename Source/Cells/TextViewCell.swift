@@ -40,13 +40,14 @@ public class TextViewCell: UITableViewCell, AssignAppearance {
 
 		titleLabel.text = model.title
 		titleLabel.font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.body)
+        titleLabel.textColor = model.titleTextColor
 
 		placeholderLabel.text = model.placeholder
         placeholderLabel.font = model.titleFont
         placeholderLabel.textColor = model.placeholderTextColor
 
         textView.font = model.titleFont
-        textView.textColor = model.titleTextColor
+        textView.textColor = Colors.text
 		textView.backgroundColor = UIColor.clear
 		textView.isScrollEnabled = false
 		textView.delegate = self
