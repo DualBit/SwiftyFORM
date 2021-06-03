@@ -1,7 +1,7 @@
 // MIT license. Copyright (c) 2021 SwiftyFORM. All rights reserved.
 import UIKit
 
-public class ButtonFormItem: FormItem, CustomizableTitleLabel, CustomizableButton {
+public class ButtonFormItem: FormItem, CustomizableTitleLabel, CustomizableFormItem {
     
 	override func accept(visitor: FormItemVisitor) {
 		visitor.visit(object: self)

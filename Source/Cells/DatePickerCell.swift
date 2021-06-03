@@ -21,6 +21,7 @@ public class DatePickerCellModel {
     var detailFont = UIFont.preferredFont(forTextStyle: .body)
     var titleTextColor = Colors.text
     var detailTextColor = Colors.secondaryText
+    var backgroundColor = Colors.background
 
 	var valueDidChange: (Date) -> Void = { (date: Date) in
 		SwiftyFormLog("date \(date)")
@@ -63,6 +64,7 @@ public class DatePickerToggleCell: UITableViewCell, SelectRowDelegate, DontColla
 		textLabel?.text = model.title
         textLabel?.font = model.titleFont
         detailTextLabel?.font = model.detailFont
+        backgroundColor = model.backgroundColor
         
 		updateValue()
 
@@ -222,11 +224,14 @@ public class DatePickerToggleCell: UITableViewCell, SelectRowDelegate, DontColla
 	public func assignDefaultColors() {
         textLabel?.textColor = model.titleTextColor
         detailTextLabel?.textColor = model.detailTextColor
+        backgroundColor = model.backgroundColor
 	}
 
 	public func assignTintColors() {
 		textLabel?.textColor = tintColor
 		detailTextLabel?.textColor = tintColor
+        backgroundColor = model.backgroundColor
+
 	}
 }
 

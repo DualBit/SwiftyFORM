@@ -22,7 +22,8 @@ public enum DatePickerFormItemMode {
 
 Behind the scenes this creates a `UIDatePicker`.
 */
-public class DatePickerFormItem: FormItem, CustomizableLabel {
+public class DatePickerFormItem: FormItem, CustomizableLabel, CustomizableFormItem {
+
 	override func accept(visitor: FormItemVisitor) {
 		visitor.visit(object: self)
 	}
@@ -99,6 +100,8 @@ public class DatePickerFormItem: FormItem, CustomizableLabel {
     
     public var detailFont = UIFont.preferredFont(forTextStyle: .body)
     public var detailTextColor = Colors.secondaryText
+
+    public var backgroundColor: UIColor? = Colors.background
 
 	public typealias ValueDidChangeBlock = (_ value: Date) -> Void
 	public var valueDidChangeBlock: ValueDidChangeBlock = { (value: Date) in

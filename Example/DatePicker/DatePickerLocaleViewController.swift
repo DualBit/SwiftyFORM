@@ -15,6 +15,7 @@ class DatePickerLocaleViewController: FormViewController {
 		let instance = DatePickerFormItem()
 		instance.title = "Date"
 		instance.datePickerMode = .date
+        instance.backgroundColor = .blue
 		return instance
 	}()
 
