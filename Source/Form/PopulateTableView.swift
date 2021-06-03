@@ -603,6 +603,7 @@ class PopulateTableView: FormItemVisitor {
 		model.placeholder = object.placeholder
         model.placeholderTextColor = object.placeholderTextColor
         model.titleTextColor = object.titleTextColor
+        model.backgroundColor = object.backgroundColor ?? Colors.background
         model.titleFont = object.titleFont
         
 		model.valueDidChange = { [weak object] (value: String) in
