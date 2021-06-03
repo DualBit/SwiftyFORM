@@ -1,7 +1,8 @@
 // MIT license. Copyright (c) 2021 SwiftyFORM. All rights reserved.
 import UIKit
 
-public class TextViewFormItem: FormItem, CustomizableTitleLabel {
+public class TextViewFormItem: FormItem, CustomizableTitleLabel, CustomizableFormItem {
+    
 	override func accept(visitor: FormItemVisitor) {
 		visitor.visit(object: self)
 	}
@@ -18,6 +19,8 @@ public class TextViewFormItem: FormItem, CustomizableTitleLabel {
 
     public var titleFont: UIFont = .preferredFont(forTextStyle: .body)
     
+    public var backgroundColor: UIColor?
+
     public var titleTextColor: UIColor = Colors.text
     
     public var placeholderTextColor: UIColor = Colors.secondaryText

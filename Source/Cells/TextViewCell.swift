@@ -16,7 +16,8 @@ public struct TextViewCellModel {
     var titleFont: UIFont = .preferredFont(forTextStyle: .body)
     var titleTextColor: UIColor = Colors.text
     var placeholderTextColor: UIColor = Colors.secondaryText
-
+    var backgroundColor: UIColor = Colors.background
+    
 	var valueDidChange: (String) -> Void = { (value: String) in
 		SwiftyFormLog("value \(value)")
 	}
@@ -42,6 +43,8 @@ public class TextViewCell: UITableViewCell, AssignAppearance {
 		titleLabel.font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.body)
         titleLabel.textColor = model.titleTextColor
 
+        backgroundColor = model.backgroundColor
+        
 		placeholderLabel.text = model.placeholder
         placeholderLabel.font = model.titleFont
         placeholderLabel.textColor = model.placeholderTextColor
@@ -232,6 +235,7 @@ public class TextViewCell: UITableViewCell, AssignAppearance {
     
     public func assignDefaultColors() {
         textView.textColor = model.titleTextColor
+        backgroundColor = model.backgroundColor
     }
     
     public func assignTintColors() {
