@@ -1,7 +1,7 @@
 // MIT license. Copyright (c) 2021 SwiftyFORM. All rights reserved.
 import UIKit
 
-public class TextFieldFormItem: FormItem, CustomizableLabel {
+public class TextFieldFormItem: FormItem, CustomizableLabel, CustomizableFormItem {
     
 	override func accept(visitor: FormItemVisitor) {
 		visitor.visit(object: self)
@@ -96,6 +96,8 @@ public class TextFieldFormItem: FormItem, CustomizableLabel {
     public var detailFont: UIFont = .preferredFont(forTextStyle: .body)
        
     public var detailTextColor: UIColor = Colors.secondaryText
+    
+    public var backgroundColor: UIColor? = Colors.background
     
     public var errorFont: UIFont = .preferredFont(forTextStyle: .caption2)
        

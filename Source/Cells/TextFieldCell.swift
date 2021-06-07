@@ -39,6 +39,7 @@ public struct TextFieldFormItemCellModel {
     var titleTextColor: UIColor = Colors.text
     var titleFont: UIFont = .preferredFont(forTextStyle: .body)
     var detailTextColor: UIColor = Colors.secondaryText
+    var backgroundColor: UIColor? = Colors.background
     var detailFont: UIFont = .preferredFont(forTextStyle: .body)
     var errorFont: UIFont = .preferredFont(forTextStyle: .caption2)
     var errorTextColor: UIColor = UIColor.red
@@ -75,6 +76,8 @@ public class TextFieldFormItemCell: UITableViewCell, AssignAppearance {
         textField.textColor = model.detailTextColor
         textField.font  = model.detailFont
         errorLabel.font = model.errorFont
+
+        backgroundColor = model.backgroundColor
 
         errorLabel.textColor = model.errorTextColor
 		errorLabel.numberOfLines = 0
@@ -382,10 +385,13 @@ public class TextFieldFormItemCell: UITableViewCell, AssignAppearance {
     
     public func assignDefaultColors() {
         titleLabel.textColor = model.titleTextColor
+        backgroundColor = model.backgroundColor
+
     }
     
     public func assignTintColors() {
         titleLabel.textColor = tintColor
+        backgroundColor = model.backgroundColor
     }
 
 }
