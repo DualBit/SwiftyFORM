@@ -1,7 +1,7 @@
 // MIT license. Copyright (c) 2021 SwiftyFORM. All rights reserved.
 import UIKit
 
-public class OptionRowModel: CustomStringConvertible {
+open class OptionRowModel: CustomStringConvertible {
 	public let title: String
 	public let identifier: String
 
