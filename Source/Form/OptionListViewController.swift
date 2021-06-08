@@ -23,6 +23,7 @@ class OptionListViewController: FormViewController, SelectOptionDelegate {
 			let option = OptionRowFormItem()
 			option.title = optionRow.title
 			option.context = optionRow
+            option.backgroundColor = optionField.backgroundColor
 			option.selected = (optionRow === optionField.selected)
 			builder.append(option)
 		}
