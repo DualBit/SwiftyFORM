@@ -15,7 +15,7 @@ open class OptionRowModel: CustomStringConvertible {
 	}
 }
 
-public class OptionPickerFormItem: FormItem, CustomizableLabel {
+public class OptionPickerFormItem: FormItem, CustomizableLabel, CustomizableFormItem {
 	override func accept(visitor: FormItemVisitor) {
 		visitor.visit(object: self)
 	}
@@ -34,6 +34,8 @@ public class OptionPickerFormItem: FormItem, CustomizableLabel {
     
     public var titleTextColor: UIColor = Colors.text
     
+    public var backgroundColor: UIColor? = Colors.background
+
     public var detailFont: UIFont = .preferredFont(forTextStyle: .body)
     
     public var detailTextColor: UIColor = Colors.secondaryText
@@ -97,7 +99,8 @@ public class OptionPickerFormItem: FormItem, CustomizableLabel {
 	}
 }
 
-public class OptionRowFormItem: FormItem, CustomizableTitleLabel {
+public class OptionRowFormItem: FormItem, CustomizableTitleLabel, CustomizableFormItem {
+    
 	override func accept(visitor: FormItemVisitor) {
 		visitor.visit(object: self)
 	}
@@ -106,6 +109,8 @@ public class OptionRowFormItem: FormItem, CustomizableTitleLabel {
     
     public var titleFont: UIFont = .preferredFont(forTextStyle: .body)
     
+    public var backgroundColor: UIColor? = Colors.background
+
     public var titleTextColor: UIColor = Colors.text
 
 	public var selected: Bool = false

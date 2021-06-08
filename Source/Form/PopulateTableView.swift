@@ -220,6 +220,7 @@ class PopulateTableView: FormItemVisitor {
 		model.selectedOptionRow = object.selected
         model.titleFont = object.titleFont
         model.titleTextColor = object.titleTextColor
+        model.backgroundColor = object.backgroundColor
         model.detailFont = object.detailFont
         model.detailTextColor = object.detailTextColor
 

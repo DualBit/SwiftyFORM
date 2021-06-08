@@ -18,6 +18,7 @@ public class OptionCell: UITableViewCell, SelectRowDelegate {
 		textLabel?.text = model.title
         textLabel?.font = model.titleFont
         textLabel?.textColor = model.titleTextColor
+        backgroundColor = model.backgroundColor
 		if model.selected {
 			accessoryType = .checkmark
 		} else {
