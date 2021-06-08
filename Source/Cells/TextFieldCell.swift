@@ -385,12 +385,14 @@ public class TextFieldFormItemCell: UITableViewCell, AssignAppearance {
     
     public func assignDefaultColors() {
         titleLabel.textColor = model.titleTextColor
+        detailTextLabel?.textColor = model.detailTextColor
         backgroundColor = model.backgroundColor
 
     }
     
     public func assignTintColors() {
         titleLabel.textColor = tintColor
+        detailTextLabel?.textColor = model.detailTextColor
         backgroundColor = model.backgroundColor
     }
 
