@@ -74,6 +74,7 @@ public class TextFieldFormItemCell: UITableViewCell, AssignAppearance {
         titleLabel.textColor = model.titleTextColor
         titleLabel.font = model.titleFont
         textField.textColor = model.detailTextColor
+        backgroundColor = model.backgroundColor
         textField.font  = model.detailFont
         errorLabel.font = model.errorFont
 

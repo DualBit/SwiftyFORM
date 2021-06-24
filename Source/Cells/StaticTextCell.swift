@@ -8,6 +8,8 @@ public struct StaticTextCellModel {
     var detailFont: UIFont = .preferredFont(forTextStyle: .body)
     var detailTextColor: UIColor = Colors.secondaryText
     var titleTextColor: UIColor = Colors.text
+    var backgroundColor = Colors.background
+
 }
 
 public class StaticTextCell: UITableViewCell, AssignAppearance {
@@ -30,16 +32,19 @@ public class StaticTextCell: UITableViewCell, AssignAppearance {
 		detailTextLabel?.text = model.value
         textLabel?.font = model.titleFont
         detailTextLabel?.font = model.detailFont
+        backgroundColor = model.backgroundColor
 	}
     
     public func assignDefaultColors() {
         textLabel?.textColor = model.titleTextColor
         detailTextLabel?.textColor = model.detailTextColor
+        backgroundColor = model.backgroundColor
     }
     
     public func assignTintColors() {
         textLabel?.textColor = tintColor
         detailTextLabel?.textColor = tintColor
+        backgroundColor = model.backgroundColor
     }
 
 }

@@ -462,6 +462,7 @@ class PopulateTableView: FormItemVisitor {
         model.titleTextColor = object.titleTextColor
         model.detailFont = object.detailFont
         model.detailTextColor = object.detailTextColor
+        model.backgroundColor = object.backgroundColor ?? Colors.background
         
 		let cell = StaticTextCell(model: model)
 		cells.append(cell)

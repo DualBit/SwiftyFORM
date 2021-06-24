@@ -1,7 +1,8 @@
 // MIT license. Copyright (c) 2021 SwiftyFORM. All rights reserved.
 import UIKit
 
-public class StaticTextFormItem: FormItem, CustomizableLabel {
+public class StaticTextFormItem: FormItem, CustomizableLabel, CustomizableFormItem {
+    
     
 	override func accept(visitor: FormItemVisitor) {
 		visitor.visit(object: self)
@@ -16,6 +17,8 @@ public class StaticTextFormItem: FormItem, CustomizableLabel {
     public var titleTextColor: UIColor = Colors.text
     
     public var detailTextColor: UIColor = Colors.secondaryText
+
+    public var backgroundColor: UIColor? = Colors.background
 
 	typealias SyncBlock = (_ value: String) -> Void
 	var syncCellWithValue: SyncBlock = { (string: String) in
